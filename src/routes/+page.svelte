@@ -7,7 +7,6 @@
 
 <div class="cta">
   <a href="/services">View Services</a>
-  <a href="/book">Book a Service</a>
 </div>
 
 <style>

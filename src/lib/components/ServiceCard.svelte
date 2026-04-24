@@ -8,7 +8,7 @@
   <p>Price: €{service.price}</p>
   <p>Duration: {service.duration}</p>
 
-  <a href={`/book/${service.id}`} class="btn">
+  <a href={"/book/" + service.id} class="btn">
     Book Service
   </a>
 </div>

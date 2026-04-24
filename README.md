@@ -20,3 +20,15 @@
 - Displays the services
 - Service card component made for reuseability when displaying services
 - removed .env file from .gitignore
+
+# Step 4 - Booking System
+- Added dynamic routing to book a service '/book/[id]'
+- Booking form for user input (name, email, date, notes)
+- Bookings table was created on turso with: 
+    -id
+    -service_id
+    -name
+    -email
+    -date
+    -notes
+    -status

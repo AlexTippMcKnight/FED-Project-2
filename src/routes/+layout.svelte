@@ -8,7 +8,6 @@
   <nav>
     <a href="/">Home</a>
     <a href="/services">Services</a>
-    <a href="/book">Book</a>
     <a href="/contact">Contact</a>
     <a href="/login">Login</a>
   </nav>
