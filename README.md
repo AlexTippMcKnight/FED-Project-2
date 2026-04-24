@@ -50,3 +50,7 @@
 # Step 7 - Error page
 - Setup custom error page
 - Improved admin error page to prompt admin login if not logged into an admin account
+
+# Step 8 - Contact page
+- Setup contact page
+- Added dashboard route and links

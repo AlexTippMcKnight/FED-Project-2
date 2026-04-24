@@ -1,4 +1,4 @@
-<h1>Welcome to TMcK Landscaping </h1>
+<h1>Welcome to TippMcKnight Landscaping </h1>
 
 <p>
   Professional garden maintenance and landscaping services including grass cutting,
@@ -7,6 +7,7 @@
 
 <div class="cta">
   <a href="/services">View Services</a>
+  <a href="/dashboard">My Dashboard</a>
 </div>
 
 <style>

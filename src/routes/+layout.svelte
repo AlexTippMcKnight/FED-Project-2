@@ -19,6 +19,7 @@
     <a href="/">Home</a>
     <a href="/services">Services</a>
     <a href="/contact">Contact</a>
+    <a href="/dashboard">My Dashboard</a>
 
     {#if data?.role === "admin"}
       <a href="/admin">Admin</a>
