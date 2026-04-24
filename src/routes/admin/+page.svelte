@@ -1,6 +1,6 @@
 <script>
 // @ts-nocheck
-
+    
   import { onMount } from "svelte";
 
   let bookings = $state([]);

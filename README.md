@@ -46,3 +46,7 @@
 - Updated bookings api
 - Updated NavBar change on login state to add admin link for admins (currently matt)
 - Admin can update status of bookings
+
+# Step 7 - Error page
+- Setup custom error page
+- Improved admin error page to prompt admin login if not logged into an admin account
