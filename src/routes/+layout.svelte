@@ -20,12 +20,17 @@
     <a href="/services">Services</a>
     <a href="/contact">Contact</a>
 
+    {#if data?.role === "admin"}
+      <a href="/admin">Admin</a>
+    {/if}
+    
     {#if data?.userId}
       <button onclick={logout}>Logout</button>
     {:else}
       <a href="/login">Login</a>
       <a href="/register">Register</a>
     {/if}
+    
   </nav>
 </header>
 

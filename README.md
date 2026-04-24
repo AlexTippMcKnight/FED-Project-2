@@ -39,3 +39,10 @@
 - Setup logout navButton/api
 - Setup session cookies
 - Setup NavBar change on login state
+
+# Step 6 - Admin
+- Setup admin user (Matt, matt@tud.ie, password)
+- Setup admin page to manage bookings
+- Updated bookings api
+- Updated NavBar change on login state to add admin link for admins (currently matt)
+- Admin can update status of bookings
