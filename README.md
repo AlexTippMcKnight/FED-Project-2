@@ -32,3 +32,10 @@
     -date
     -notes
     -status
+
+# Step 5 - Login/Register/Logout
+- Setup login page/api
+- Setup register page/api
+- Setup logout navButton/api
+- Setup session cookies
+- Setup NavBar change on login state

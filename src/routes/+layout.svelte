@@ -1,5 +1,15 @@
 <script>
-  let { data , children } = $props();
+// @ts-nocheck
+
+  let { data, children } = $props();
+
+  async function logout() {
+    await fetch("/api/logout", {
+      method: "POST"
+    });
+
+    window.location.href = "/";
+  }
 </script>
 
 <header class="nav">
@@ -9,7 +19,13 @@
     <a href="/">Home</a>
     <a href="/services">Services</a>
     <a href="/contact">Contact</a>
-    <a href="/login">Login</a>
+
+    {#if data?.userId}
+      <button onclick={logout}>Logout</button>
+    {:else}
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    {/if}
   </nav>
 </header>
 
@@ -36,13 +52,19 @@
     font-size: 1.2rem;
   }
 
-  nav a {
+  nav a,
+  nav button {
     margin-left: 1rem;
     color: white;
     text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
   }
 
-  nav a:hover {
+  nav a:hover,
+  nav button:hover {
     text-decoration: underline;
   }
 
