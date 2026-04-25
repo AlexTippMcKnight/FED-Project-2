@@ -25,6 +25,7 @@
     {:else if bookings.length === 0}
     <p>You have no bookings yet.</p>
     {:else}
+    <p>You have {bookings.length} booking(s).</p>
     {#each bookings as booking}
         <div class="booking">
         <h3>{booking.service_name}</h3>

@@ -37,6 +37,11 @@ export async function POST({ request, cookies }) {
     httpOnly: true,
     sameSite: "strict"
   });
+  cookies.set("name", user.name, {
+    path: "/",
+    httpOnly: true,
+    sameSite: "strict"
+  });
 
   return new Response(JSON.stringify({ success: true }));
 }

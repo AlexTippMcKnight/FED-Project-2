@@ -14,7 +14,7 @@
 
 <header class="nav">
   <div class="logo">TMcK Landscaping</div>
-
+  
   <nav>
     <a href="/">Home</a>
     <a href="/services">Services</a>
@@ -33,6 +33,9 @@
     {/if}
     
   </nav>
+  {#if data?.userId}
+    <p>User: {data.name} | Role: {data.role}</p>
+  {/if}
 </header>
 
 <main class="container">
@@ -72,8 +75,11 @@
   nav a:hover,
   nav button:hover {
     text-decoration: underline;
+    opacity: 0.85;
   }
-
+  button:hover{
+    opacity: 0.85;
+  }
   .container {
     padding: 2rem;
     min-height: 70vh;

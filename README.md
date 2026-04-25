@@ -69,3 +69,7 @@
 
 # Step 11 - Loading messages
 - Just added loading messages where necessary (admin and user dashboards)
+
+# Step 12 - Minor Ux improvements
+- Added user: and role: to header
+- Added booking counter for users
