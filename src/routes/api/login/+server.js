@@ -19,6 +19,13 @@ export async function POST({ request, cookies }) {
       status: 401
     });
   }
+  let message = "";
+
+  if (user.email === "simona@gmail.com"){
+    message = "I love you pookie <3"
+  } else if (user.email === "reyes_brendan@icloud.com"){
+    message = "Bozo, get better at bouldering"
+  }
 
   cookies.set("user_id", user.id, {
     path: "/",
@@ -43,5 +50,9 @@ export async function POST({ request, cookies }) {
     sameSite: "strict"
   });
 
-  return new Response(JSON.stringify({ success: true }));
+  return new Response(JSON.stringify({ 
+    success: true,
+    message
+
+   }));
 }

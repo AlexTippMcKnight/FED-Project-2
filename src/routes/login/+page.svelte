@@ -13,7 +13,11 @@
       body: JSON.stringify({ email, password })
     });
 
+    const data = await res.json();
     if (res.ok) {
+        if (data.message) {
+            alert(data.message);
+        }
       window.location.href = "/";
     } else {
       message = "Invalid email or password.";

@@ -73,3 +73,6 @@
 # Step 12 - Minor Ux improvements
 - Added user: and role: to header
 - Added booking counter for users
+
+# Random Commit - I got bored 
+- added a message popup for friends
