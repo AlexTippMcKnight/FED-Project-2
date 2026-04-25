@@ -2,7 +2,11 @@
 import { db } from "$lib/server/db";
 
 export async function POST({ request }) {
-  const { name, email, password } = await request.json();
+  const data = await request.json();
+
+    const name = data.name;
+    const email = data.email.toLowerCase();
+    const password = data.password;
 
   await db.execute({
     sql: "INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)",

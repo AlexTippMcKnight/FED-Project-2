@@ -2,8 +2,11 @@
 import { db } from "$lib/server/db";
 
 export async function POST({ request, cookies }) {
-  const { email, password } = await request.json();
+  const data = await request.json();
 
+  const email = data.email.toLowerCase();
+  const password = data.password;
+  
   const result = await db.execute({
     sql: "SELECT * FROM users WHERE email = ? AND password = ?",
     args: [email, password]
@@ -24,6 +27,12 @@ export async function POST({ request, cookies }) {
   });
 
   cookies.set("role", user.role, {
+    path: "/",
+    httpOnly: true,
+    sameSite: "strict"
+  });
+
+  cookies.set("email", user.email, {
     path: "/",
     httpOnly: true,
     sameSite: "strict"

@@ -54,3 +54,9 @@
 # Step 8 - Contact page
 - Setup contact page
 - Added dashboard route and links
+
+# Step 9 - Dashboard page
+- Setup Dashboard page for users to see their orders 
+- Made a custom error page similar to the admin one which prompts users to login if they are not.
+- Changed how emails are stored in database and cookies, to stop duplicate emails via different capitalization
+- Added back my post code which i accidently deleted in a earlier commit, resulting in no bookings sending to the database
