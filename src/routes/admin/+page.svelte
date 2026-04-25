@@ -22,20 +22,39 @@
   }
 
   onMount(loadBookings);
+
+  let statusFilter = $state("all");
+
+    let filteredBookings = $derived(
+    statusFilter === "all"
+        ? bookings
+        : bookings.filter((booking) => booking.status === statusFilter)
+    );
 </script>
 
-<h1>Admin Dashboard</h1>
+
 {#if loading}
+<h1>Admin Dashboard</h1>
   <p>Loading bookings...</p>
 {:else if bookings.length === 0}
+<h1>Admin Dashboard</h1>
   <p>No bookings found.</p>
 {:else}
-{#each bookings as booking}
+<h1>Admin Dashboard - {filteredBookings.length} bookings</h1>
+    <div class="filters">
+    <button onclick={() => statusFilter = "all"}>All</button>
+    <button onclick={() => statusFilter = "pending"}>Pending</button>
+    <button onclick={() => statusFilter = "confirmed"}>Confirmed</button>
+    <button onclick={() => statusFilter = "completed"}>Completed</button>
+    </div>
+{#each filteredBookings as booking}
   <div class="card">
     <h3>{booking.service_name}</h3>
     <p>{booking.name} ({booking.email})</p>
     <p>Date: {booking.date}</p>
-    <p>Status: {booking.status}</p>
+    <p class={"status " + booking.status}>
+        Status: {booking.status}
+    </p>
 
     <button onclick={() => updateStatus(booking.id, "confirmed")}>
       Confirm
@@ -52,5 +71,29 @@
     border: 1px solid #ccc;
     padding: 1rem;
     margin-bottom: 1rem;
+  }
+  .status {
+  font-weight: bold;
+  }
+
+  .pending {
+    color: orange;
+  }
+
+  .confirmed {
+    color: blue;
+  }
+
+  .completed {
+    color: green;
+  }
+  
+  .filters {
+    margin-bottom: 1rem;
+  }
+
+  .filters button {
+    margin-right: 0.3rem;
+    padding: 0.2rem 0.4rem;
   }
 </style>

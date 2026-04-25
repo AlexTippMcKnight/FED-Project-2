@@ -76,3 +76,7 @@
 
 # Random Commit - I got bored 
 - added a message popup for friends
+
+# Step 13 - Booking Total/Filter
+- Added total bookings to admin and user dashboards 
+- Added filter buttons for booking dashboards (AI help)
