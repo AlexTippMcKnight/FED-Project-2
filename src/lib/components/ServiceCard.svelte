@@ -3,6 +3,7 @@
 </script>
 
 <div class="card">
+<p>{service.id}</p>
   <h2>{service.name}</h2>
   <p>{service.description}</p>
   <p>Price: €{service.price}</p>

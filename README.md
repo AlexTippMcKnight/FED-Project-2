@@ -85,3 +85,7 @@
 - Added a table to the database for submissions from contact page
 - Added a message board link for admin page
 - Added timers to form submission success messages
+
+# Step 15 - Booking Page Update
+- Fixed booking page (forgot to declare variable :P)
+- Added an indicator of what service is actually being booked
