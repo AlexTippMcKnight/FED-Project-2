@@ -34,10 +34,17 @@ export async function POST({ request }) {
   const data = await request.json();
 
   const service_id = data.service_id;
-  const name = data.name;
-  const email = data.email.toLowerCase();
+  const name = data.name?.trim();
+  const email = data.email?.trim().toLowerCase();
   const date = data.date;
   const notes = data.notes;
+  
+  if (!service_id || !name || !email || !date) {
+    return new Response(
+      JSON.stringify({ error: "Missing required fields" }), 
+      { status: 400 }
+    );
+  }
 
   await db.execute({
     sql: `

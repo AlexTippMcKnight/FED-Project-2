@@ -13,7 +13,7 @@
   async function submitBooking(event) {
     event.preventDefault();
 
-    await fetch("/api/bookings", {
+    const res = await fetch("/api/bookings", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -25,16 +25,24 @@
       })
     });
 
-    alert("Booking submitted");
+    if (res.ok) {
+      alert("Booking submitted");
+      name = "";
+      email = "";
+      date = "";
+      notes = "";
+    } else {
+      alert("Failed to submit booking");
+    }
   }
 </script>
 
 <h1>Book Service</h1>
 
 <form onsubmit={submitBooking}>
-  <input placeholder="Name" bind:value={name} />
-  <input placeholder="Email" bind:value={email} />
-  <input type="date" bind:value={date} />
+  <input placeholder="Name" bind:value={name} required/>
+  <input placeholder="Email" bind:value={email} required/>
+  <input type="date" bind:value={date} required/>
   <textarea placeholder="Notes" bind:value={notes}></textarea>
 
   <button type="submit">Submit Booking</button>

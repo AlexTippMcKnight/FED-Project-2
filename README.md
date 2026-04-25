@@ -60,3 +60,9 @@
 - Made a custom error page similar to the admin one which prompts users to login if they are not.
 - Changed how emails are stored in database and cookies, to stop duplicate emails via different capitalization
 - Added back my post code which i accidently deleted in a earlier commit, resulting in no bookings sending to the database
+
+# Step 10 - Minor fixes
+- On register form submission it now redirects to /login rather than saying 'you can login now'
+- Bookings now require data before submitting to avoid null data in database table
+- After booking form submission text boxes are now cleared
+- Added loading text to services page

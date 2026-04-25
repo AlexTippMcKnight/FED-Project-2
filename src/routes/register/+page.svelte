@@ -16,10 +16,7 @@
     });
 
     if (res.ok) {
-      message = "Account created. You can now log in.";
-      name = "";
-      email = "";
-      password = "";
+      window.location.href = "/login";
     } else {
       message = "Registration failed.";
     }
