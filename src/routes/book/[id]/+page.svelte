@@ -31,6 +31,9 @@
       email = "";
       date = "";
       notes = "";
+      setTimeout(() => {
+        message = "";
+      }, 4000);
     } else {
       message = "Failed to submit booking, please try again.";
     }

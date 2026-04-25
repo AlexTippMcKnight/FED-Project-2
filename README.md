@@ -80,3 +80,8 @@
 # Step 13 - Booking Total/Filter
 - Added total bookings to admin and user dashboards 
 - Added filter buttons for booking dashboards (AI help)
+
+# Step 14 - Message Database
+- Added a table to the database for submissions from contact page
+- Added a message board link for admin page
+- Added timers to form submission success messages

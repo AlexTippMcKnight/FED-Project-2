@@ -32,7 +32,9 @@
     );
 </script>
 
-
+<div class="admin-links">
+  <a href="/admin/messages" class="btn">View Messages</a>
+</div>
 {#if loading}
 <h1>Admin Dashboard</h1>
   <p>Loading bookings...</p>
@@ -87,7 +89,7 @@
   .completed {
     color: green;
   }
-  
+
   .filters {
     margin-bottom: 1rem;
   }
@@ -95,5 +97,22 @@
   .filters button {
     margin-right: 0.3rem;
     padding: 0.2rem 0.4rem;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.6rem 1rem;
+    background: #1f3d2b;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+
+  .btn:hover {
+    opacity: 0.85;
+  }
+  .admin-links {
+    margin-bottom: 1.5rem;
   }
 </style>

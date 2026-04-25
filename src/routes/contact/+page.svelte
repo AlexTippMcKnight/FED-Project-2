@@ -4,21 +4,63 @@
   let name = $state("");
   let email = $state("");
   let message = $state("");
+  let feedback = $state("");
 
-  function submitForm(event) {
+  async function sendMessage(event) {
     event.preventDefault();
-    alert("Message sent");
+
+    const res = await fetch("/api/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message
+      })
+    });
+
+    if (res.ok) {
+      feedback = "Message sent successfully.";
+      name = "";
+      email = "";
+      message = "";
+      setTimeout(() => {
+        feedback = "";
+      }, 4000);
+    } else {
+      feedback = "Please complete all fields.";
+    }
   }
 </script>
 
 <h1>Contact Us</h1>
 
-<form onsubmit={submitForm}>
+<form onsubmit={sendMessage}>
   <input placeholder="Name" bind:value={name} required />
-  <br><br>
   <input type="email" placeholder="Email" bind:value={email} required />
-  <br><br>  
-  <textarea placeholder="Message" bind:value={message} required ></textarea>
-    <br><br>
-  <button type="submit">Send</button>
+  <textarea placeholder="Message" bind:value={message} required></textarea>
+
+  <button type="submit">Send Message</button>
 </form>
+
+<p>{feedback}</p>
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+  }
+
+  input,
+  textarea {
+    padding: 8px;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+</style>
