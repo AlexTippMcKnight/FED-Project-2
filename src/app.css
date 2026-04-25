@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f6ef;
+}
+
+h1, h2, h3 {
+  color: #1f3d2b;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+
+button,
+.btn {
+  background: #1f3d2b;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover,
+.btn:hover {
+  background: #2e5a40;
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pending {
+  color: orange;
+}
+
+.confirmed {
+  color: blue;
+}
+
+.completed {
+  color: green;
+}
+
+form {
+  max-width: 400px;
+}

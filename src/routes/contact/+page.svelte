@@ -48,18 +48,6 @@
 <p>{feedback}</p>
 
 <style>
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-  }
-
-  input,
-  textarea {
-    padding: 8px;
-  }
-
   textarea {
     min-height: 120px;
   }

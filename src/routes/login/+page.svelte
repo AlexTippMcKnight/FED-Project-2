@@ -29,9 +29,9 @@
 
 <form onsubmit={login}>
   <input type="email" placeholder="Email" bind:value={email} required />
-  <br><br>
+  
   <input type="password" placeholder="Password" bind:value={password} required />
-  <br><br>
+  
   <button type="submit">Login</button>
 </form>
 

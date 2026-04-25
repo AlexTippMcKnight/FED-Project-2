@@ -8,4 +8,4 @@
 
 <p>Error code: {page.status}</p>
 
-<a href="/">Return home</a>
+<a href="/" class="btn">Return home</a>

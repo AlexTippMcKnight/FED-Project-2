@@ -27,11 +27,11 @@
 
 <form onsubmit={register}>
     <input placeholder="Name" bind:value={name} required />
-    <br><br>
+    
     <input type="email" placeholder="Email" bind:value={email} required />
-    <br><br>
+   
     <input type="password" placeholder="Password" bind:value={password} required />
-    <br><br>
+  
     <button type="submit">Register</button>
 </form>
 

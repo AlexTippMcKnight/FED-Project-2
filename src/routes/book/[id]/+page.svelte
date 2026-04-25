@@ -56,12 +56,13 @@
 {#if loadingService}
   <p>Loading selected service...</p>
 {:else if service}
-  <div class="selected-service">
+  <div class="card">
     <h2>Selected Service: {service.name}</h2>
     <p>{service.description}</p>
     <p>Price: €{service.price}</p>
     <p>Duration: {service.duration}</p>
   </div>
+  <h2>Book this Service</h2>
 {:else}
   <p>Service not found.</p>
 {/if}
@@ -76,21 +77,5 @@
 </form>
 <p>{message}</p>
 <style>
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-  }
 
-  input, textarea {
-    padding: 8px;
-  }
-  .selected-service {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 6px;
-    background: #f7f7f7;
-  }
 </style>

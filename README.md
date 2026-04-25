@@ -89,3 +89,10 @@
 # Step 15 - Booking Page Update
 - Fixed booking page (forgot to declare variable :P)
 - Added an indicator of what service is actually being booked
+
+# Step 16 - CSS 
+- I spent too long on this i forgot exactly what i did
+- Made an app.css file to import into +layout.svelte to avoid bloating it too much
+- Deleted any duplicate css i could find
+- Changed a few div classes to match global css class
+- This might be my final commit 

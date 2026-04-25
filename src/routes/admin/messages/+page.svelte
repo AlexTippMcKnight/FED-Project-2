@@ -30,7 +30,7 @@
 {:else}
   <h1>Contact Messages - Total: {messages.length}</h1>
   {#each messages as message}
-    <div class="message-card">
+    <div class="card">
       <h3>{message.name}</h3>
       <p>Email: {message.email}</p>
       <p>{message.message}</p>
@@ -40,25 +40,6 @@
 {/if}
 
 <style>
-  .message-card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 6px;
-  }
-    .btn {
-    display: inline-block;
-    margin-bottom: 1rem;
-    padding: 0.6rem 1rem;
-    background: #1f3d2b;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-  }
-
-  .btn:hover {
-    opacity: 0.85;
-  }
   .admin-links {
     margin-bottom: 1.5rem;
   }

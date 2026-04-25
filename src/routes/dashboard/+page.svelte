@@ -49,7 +49,7 @@
         <button onclick={() => statusFilter = "completed"}>Completed</button>
     </div>
     {#each filteredBookings as booking}
-        <div class="booking">
+        <div class="card">
         <h3>{booking.service_name}</h3>
         <p>Date: {booking.date}</p>
         <p class={"status " + booking.status}>
@@ -61,26 +61,8 @@
     
 {/if}
 <style>
-  .booking {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 6px;
-  }
-    .status {
-  font-weight: bold;
-  }
-
-  .pending {
-    color: orange;
-  }
-
-  .confirmed {
-    color: blue;
-  }
-
-  .completed {
-    color: green;
+  .status {
+    font-weight: bold;
   }
 
   .filters {

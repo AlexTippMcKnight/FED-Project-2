@@ -22,14 +22,14 @@
     <p>No services available.</p>
 
 {:else}
-    <div class="cards">
+    <div class="serviceGrid">
         {#each services as service}
             <ServiceCard {service} />
         {/each}
     </div>
 {/if}
 <style>
-    .cards {
+    .serviceGrid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1rem;

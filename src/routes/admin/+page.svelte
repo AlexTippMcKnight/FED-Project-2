@@ -69,25 +69,8 @@
 {/each}
 {/if}
 <style>
-  .card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
   .status {
   font-weight: bold;
-  }
-
-  .pending {
-    color: orange;
-  }
-
-  .confirmed {
-    color: blue;
-  }
-
-  .completed {
-    color: green;
   }
 
   .filters {
@@ -99,19 +82,6 @@
     padding: 0.2rem 0.4rem;
   }
 
-  .btn {
-    display: inline-block;
-    margin-bottom: 1rem;
-    padding: 0.6rem 1rem;
-    background: #1f3d2b;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-  }
-
-  .btn:hover {
-    opacity: 0.85;
-  }
   .admin-links {
     margin-bottom: 1.5rem;
   }
