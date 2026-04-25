@@ -4,10 +4,11 @@
   import { onMount } from "svelte";
 
   let bookings = $state([]);
-
+  let loading = $state(true);
   async function loadBookings() {
     const res = await fetch("/api/bookings");
     bookings = await res.json();
+    loading = false;
   }
 
   async function updateStatus(id, status) {
@@ -24,7 +25,11 @@
 </script>
 
 <h1>Admin Dashboard</h1>
-
+{#if loading}
+  <p>Loading bookings...</p>
+{:else if bookings.length === 0}
+  <p>No bookings found.</p>
+{:else}
 {#each bookings as booking}
   <div class="card">
     <h3>{booking.service_name}</h3>
@@ -41,7 +46,7 @@
     </button>
   </div>
 {/each}
-
+{/if}
 <style>
   .card {
     border: 1px solid #ccc;

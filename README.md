@@ -66,3 +66,6 @@
 - Bookings now require data before submitting to avoid null data in database table
 - After booking form submission text boxes are now cleared
 - Added loading text to services page
+
+# Step 11 - Loading messages
+- Just added loading messages where necessary (admin and user dashboards)

@@ -26,13 +26,13 @@
     });
 
     if (res.ok) {
-      alert("Booking submitted");
+      message = "Booking submitted successfully!";
       name = "";
       email = "";
       date = "";
       notes = "";
     } else {
-      alert("Failed to submit booking");
+      message = "Failed to submit booking, please try again.";
     }
   }
 </script>
@@ -47,7 +47,7 @@
 
   <button type="submit">Submit Booking</button>
 </form>
-
+<p>{message}</p>
 <style>
   form {
     display: flex;
