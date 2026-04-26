@@ -1,3 +1,7 @@
+<script>
+  let { data } = $props();
+</script>
+
 <h1>Welcome to TippMcKnight Landscaping </h1>
 
 <p>
@@ -7,7 +11,9 @@
 
 <div class="cta">
   <a href="/services" class="btn">View Services</a>
+  {#if data?.userId}
   <a href="/dashboard" class="btn">My Dashboard</a>
+  {/if}
 </div>
 
 <style>

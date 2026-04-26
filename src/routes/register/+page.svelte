@@ -14,11 +14,16 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, password })
     });
+    
+    const data = await res.json();
 
     if (res.ok) {
       window.location.href = "/login";
     } else {
-      message = "Registration failed.";
+      message = data.error || "Registration failed, please try again.";
+      setTimeout(() => {
+        message = "";
+      }, 4000);
     }
   }
 </script>

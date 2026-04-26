@@ -96,3 +96,9 @@
 - Deleted any duplicate css i could find
 - Changed a few div classes to match global css class
 - This might be my final commit 
+
+# Step 17 - Random tweaks
+- Homepage -> Made my dashboard button only appear when logged in
+- Handled if existing email is used to register 
+- Google fonts
+- Okay this should be my final Commit :D

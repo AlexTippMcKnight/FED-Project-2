@@ -54,6 +54,11 @@
     <h3>{booking.service_name}</h3>
     <p>{booking.name} ({booking.email})</p>
     <p>Date: {booking.date}</p>
+    <p>Notes: {booking.notes} 
+      {#if booking.notes.length === 0}
+        N/A
+      {/if}
+    </p>
     <p class={"status " + booking.status}>
         Status: {booking.status}
     </p>
