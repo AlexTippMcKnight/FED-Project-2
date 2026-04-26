@@ -1,15 +1,21 @@
 <script>
+// @ts-nocheck
+
+    import servicesJSON from "$lib/data/services.json";
     import ServiceCard from "$lib/components/ServiceCard.svelte";
     import { onMount } from "svelte";
 
-    // @ts-ignore
     let services = $state([]);
     let loading = $state(true);
+    let fallbackServices = $state([]);
 
     async function loadServices() {
         const res = await fetch("/api/services");
         services = await res.json();
         loading = false;
+        if (services.length === 0) {
+            fallbackServices = servicesJSON;
+        }
     }
 
     onMount(loadServices);
@@ -18,15 +24,14 @@
 <h1>Services</h1>
 {#if loading}
     <p>Loading services...</p>
-{:else if services.length === 0}
-    <p>No services available.</p>
-
+{:else if services.length > 0}
+  {#each services as service}
+    <ServiceCard {service} />
+  {/each}
 {:else}
-    <div class="serviceGrid">
-        {#each services as service}
-            <ServiceCard {service} />
-        {/each}
-    </div>
+  {#each fallbackServices as service}
+    <ServiceCard {service} />
+  {/each}
 {/if}
 <style>
     .serviceGrid {

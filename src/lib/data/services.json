@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Grass Cutting",
+    "description": "Regular lawn mowing and edging",
+    "price": 25,
+    "duration": "1 hour"
+  },
+  {
+    "id": 2,
+    "name": "Hedge Trimming",
+    "description": "Shaping and maintenance of hedges",
+    "price": 35,
+    "duration": "1.5 hours"
+  },
+  {
+    "id": 3,
+    "name": "Weeding",
+    "description": "Removal of weeds from garden beds",
+    "price": 20,
+    "duration": "1 hour"
+  },
+  {
+    "id": 4,
+    "name": "Garden Design",
+    "description": "Full garden planning and layout",
+    "price": 120,
+    "duration": "Consultation"
+  }
+]

@@ -102,3 +102,8 @@
 - Handled if existing email is used to register 
 - Google fonts
 - Okay this should be my final Commit :D
+
+# Step 18 - Forgotten Json
+- I forgot to add json data to the project before submission
+- Added services.json as a back up if the database fails to provide them.
+- Final Commit!!!
